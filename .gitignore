@@ -1,0 +1,6 @@
+env/
+*.swp
+coopy.log
+userrepo
+settings.py
+*.pyc
