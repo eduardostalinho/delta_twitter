@@ -21,7 +21,7 @@ class HashtagStreamer(TwythonStreamer):
         hashtags = [ x.get('text'.lower()) for x in data.get('entities', {}).get('hashtags', []) ]
         if self.hashtag.lower() in hashtags:
             user_id = data.get('user', {}).get('id')
-            screen_name = self.twitter.show_user(user_id=user_id)['screen_name'],
+            screen_name = data.get('user', {}).get('screen_name')
 
             followers = []
             next_cursor = -1
